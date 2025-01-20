@@ -33,8 +33,8 @@ plugin = Plugin(
 
 plugin.methods.register_function(
     function=nw_align,
-    inputs={'seq1': FeatureData[Sequence],
-            'seq2': FeatureData[Sequence]},
+    inputs={'seq1': SingleDNASequence,
+            'seq2': SingleDNASequence},
     parameters={
         'gap_open_penalty': Float % Range(0, None, inclusive_start=False),
         'gap_extend_penalty': Float % Range(0, None, inclusive_start=False),
